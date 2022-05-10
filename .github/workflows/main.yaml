@@ -42,18 +42,18 @@ jobs:
 
 
 
-      # -
+      -
 
-      #   name: Post message on slack
+        name: Post message on slack
 
-      #   uses: bluenovaio/action-slack@main
+        uses: bluenovaio/action-slack@main
 
-      #   with:
+        with:
 
-      #     username: "Yeemonaung1"
+          username: "Yeemonaung1"
 
-      #     icon_emoji: ":robot_face:"
+          icon_emoji: ":robot_face:"
 
-      #     text:  "Name: Yee Mon Aung \nMatriculation: A0249475N \nEmail: <outlook.com|E0941668@u.nus.edu> \nRepo: <https://github.com/Yeemonaung1/randnum.git|git://github.com/Yeemonaung1/randnum.git>\nImage name: yeemonaung28/randnumimg:${{github.ref_name}}\nImage url: <https://hub.docker.com/repository/docker/yeemonaung28/randnumimgt|https://hub.docker.com/repository/docker/yeemonaung28/randnumimg>"
+          text:  "Name: Yee Mon Aung \nMatriculation: A0249475N \nEmail: <outlook.com|E0941668@u.nus.edu> \nRepo: <https://github.com/Yeemonaung1/randnum.git|git://github.com/Yeemonaung1/randnum.git>\nImage name: yeemonaung28/randnumimg:${{github.ref_name}}\nImage url: <https://hub.docker.com/repository/docker/yeemonaung28/randnumimgt|https://hub.docker.com/repository/docker/yeemonaung28/randnumimg>"
 
-      #     webhook_url: ${{ secrets.SLACK_WEBHOOK }}
+          webhook_url: ${{ secrets.SLACK_WEBHOOK }}
