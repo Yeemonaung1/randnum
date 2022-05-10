@@ -6,13 +6,10 @@ on:
     tag:
     - v1.*
 
-     
-
 jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
-
       -
         name: Checkout
         uses: actions/checkout@v2
@@ -40,20 +37,12 @@ jobs:
           push: true
           tags: yeemonaung286/randnumimg:v1.3
 
-
-
       -
-
         name: Post message on slack
-
         uses: bluenovaio/action-slack@main
-
         with:
-
           username: "Yeemonaung1"
-
           icon_emoji: ":robot_face:"
-
-          text:  "Name: Yee Mon Aung \nMatriculation: A0249475N \nEmail: <outlook.com|E0941668@u.nus.edu> \nRepo: <https://github.com/Yeemonaung1/randnum.git|git://github.com/Yeemonaung1/randnum.git>\nImage name: yeemonaung286/randnumimg:${{github.ref_name}}\nImage url: <https://hub.docker.com/repository/docker/yeemonaung286/randnumimgt|https://hub.docker.com/repository/docker/yeemonaung286/randnumimg>"
+          text:  "Name: Yee Mon Aung \nMatriculation: A0249475N \nEmail: <outlook.com|E0941668@u.nus.edu> \nRepo: <https://github.com/Yeemonaung1/randnum.git|git://github.com/Yeemonaung1/randnum.git>\nImage name: yeemonaung286/randnumimg:${{github.ref_name}}\nImage url: <https://hub.docker.com/repository/docker/yeemonaung286/randnumimg|https://hub.docker.com/repository/docker/yeemonaung286/randnumimg>"
 
           webhook_url: ${{ secrets.SLACK_WEBHOOK }}
